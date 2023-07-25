@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" type="text/css" href="Stile.css">
+        <script src="menu.js"></script>
+        <script src="app.js"></script>
+        <link rel="manifest" href="manifest.json">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="application-name" content="mypwa">
+<meta name="apple-mobile-web-app-title" content="mypwa">
+<meta name="msapplication-starturl" content="/">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="icon" type="png" sizes="192x192" href="pop.png">
+<link rel="apple-touch-icon" type="png" sizes="192x192" href="pop.png">
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>GUBOOK</title>
+</head>
+<body>
+
+<div class='header'>
+    <div class='container-head'>
+        <div class='header-line'>
+            <div class='header-logo'>
+                <img src="logo.png" alt="" class="max">
+                <div class="name-box">
+                    <a class="name" href="@">GUBOOK</a>
+                </div>
+            </div>
+            <div class='nav'>
+                <a class='nav-item' href="@">ГЛАВНАЯ</a>
+                <a class='nav-item' href="@">КАЛЕНДАРЬ</a>
+                <a class='nav-item' href="@">О НАС</a>
+                <a class='nav-item' href="@">ЗАПИСЬ</a>
+            </div>
+        </div>
+    </div>
+    <div class='container'>
+        <div class='header-down'>
+
+            <div class='header-title'>
+                Займите очередь
+
+                <div class='header-subtitle'>
+                    Прямо сейчас
+                </div>
+
+                <div class='header-bth'>
+                    <a href='#' class='header-button'>ЗАПИСЬ</a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    
+    
+<div class='cards'>
+
+    <div class='container'>
+
+       <div class='cards-holder'>
+
+            <div class='card'>
+
+                <div class='card-image'>
+                    <img class='card-img' src='icon_1.png' width="87" height="87">
+                </div>
+
+                <div class='card-title'>
+                    Экономь  <span>Время</span>
+                </div>
+
+                <div class='card-desc'>
+                    Не стой по напрасну в очередях на сдачу лаб
+                </div>
+
+            </div>
+
+            <div class='card'>
+
+                <div class='card-image'>
+                    <img class='card-img' src='icon_2.png' width="87" height="87">
+                </div>
+
+                <div class='card-title'>
+                    Экономь  <span>Нервы</span>
+                </div>
+
+                <div class='card-desc'>
+                    С нашим онлайн сервисом ты все успеешь
+
+                </div>
+
+            </div>
+
+            <div class='card'>
+
+                <div class='card-image'>
+                    <img class='card-img' src='icon_3.png' width="87" height="87">
+                </div>
+
+                <div class='card-title'>
+                   Будь  <span>Первым</span>
+                </div>
+
+                <div class='card-desc'>
+                    Займи очередь прямо сейчас Успех в твоих руках!
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class='history'>
+
+    <div class='container'>
+
+        <div class='history-holder'>
+            <div class='history-info'>
+                <div class='history-title'>
+                    Наша <span>История</span>
+                </div>
+
+                <div class='history-desc'>
+                    Бывало такое, что ты не успеал закрыть вовремя какой-то предмет? Приходил сдавать лабы, а там уже большая очередь? Со мной бывало :( Теперь с нашим сайтом ты сможешь успеть все вовремя! Больше не прийдется по напрасну сидеть в аудитории и надеяться что ты сможешь закрыть хотя б одну лабу. Правильно расчитывай свое время и будь всегда первым! Ты все сможешь!
+                </div>
+
+
+                <div class='history-number'>
+                    <div class='number-item'>
+                        42 <span>Предмета</span>
+                    </div>
+
+                    <div class='number-item'>
+                        134 <span>Лабы</span>
+                    </div>
+
+                    <div class='number-item'>
+                        253 <span>Довольных студента</span>
+                    </div>
+                </div>
+            </div>
+            <div class='history-images'>
+                <img class='imgages-1' src="1.png" width="350" height="350">
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    
+<div class="comments-container">
+	<form name="form1" method="post" action="script.php">
+    <div class="comments-form">
+        <h2>Оставьте свой комментарий</h2>
+        <form action="/submit_comment" method="POST">
+            <label class="enter_pol" for="name">Ник:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label class="enter_pol" for="email">Почта:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label class="enter_pol" for="message">Комментарий:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+
+            <input type="submit" value="Отправить">
+        </form>
+    </div>
+	</form>
+    <div class="comments-list">
+		<?php include 'get_comments.php'; ?>
+    </div>
+</div>
+    
+
+<div class='bottom'>
+    <div class='container-end'>
+        <div class='end'>
+                <p>&copy; GUBOOK. All rights reserved. | Photos by <a href="https://t.me/Mag_istro">Mag_istro</a> | Design by <a href="https://t.me/Mag_istro" rel="nofollow">Mag_istro</a>.</p>
+            </div>
+    </div>
+</div>
+    
+</body>
+</html>
